@@ -2,22 +2,25 @@
 
 /* Global styles */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Presario', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, rgba(0, 94, 255, 0.7), rgba(255, 0, 158, 0.7));
+  background: linear-gradient(135deg, rgba(25, 246, 9, 0.893), rgba(255, 0, 158, 0.7));
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   color: #fff;
 }
-
+@font-face {
+  font-family: 'Presario';
+  src: url('./PresarioText-5zxx.ttf')format('truetype');
+}
 .modern-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  background: linear-gradient(135deg, #410dde 0%, #26d0ce 100%);
 }
 
 .glass-card {
@@ -31,9 +34,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-title {
-  font-size: 3rem;
-  background: linear-gradient(to right, #fff, #26d0ce);
+.main-title { 
+  font-size: 3rem; 
+  font-family: 'Presario', sans-serif;
+  background: linear-gradient(to right, #62ddff, #1aff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -57,25 +61,56 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Low - Green hues */
 .gas-price-card:nth-child(1) {
-  background: linear-gradient(135deg, rgba(41, 128, 185, 0.2), rgba(109, 213, 237, 0.2));
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.2), rgba(111, 207, 151, 0.2));
+  border: 1px solid rgba(39, 174, 96, 0.3);
 }
 
+.gas-price-card:nth-child(1):hover {
+  box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.3), rgba(111, 207, 151, 0.3));
+}
+
+/* Medium - Yellow/Orange hues */
 .gas-price-card:nth-child(2) {
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(142, 68, 173, 0.2));
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(241, 196, 15, 0.2), rgba(243, 156, 18, 0.2));
+  border: 1px solid rgba(241, 196, 15, 0.3);
   transform: scale(1.05);
 }
 
+.gas-price-card:nth-child(2):hover {
+  box-shadow: 0 10px 20px rgba(241, 196, 15, 0.3);
+  background: linear-gradient(135deg, rgba(241, 196, 15, 0.3), rgba(243, 156, 18, 0.3));
+}
+
+/* High - Red hues */
 .gas-price-card:nth-child(3) {
-  background: linear-gradient(135deg, rgba(142, 68, 173, 0.2), rgba(192, 57, 43, 0.2));
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(192, 57, 43, 0.2));
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.gas-price-card:nth-child(3):hover {
+  box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.3), rgba(192, 57, 43, 0.3));
+}
+
+/* Add matching text colors for each card */
+.gas-price-card:nth-child(1) .gas-unit {
+  color: rgb(175, 235, 200);
+}
+
+.gas-price-card:nth-child(2) .gas-unit {
+  color: rgb(245, 223, 136);
+}
+
+.gas-price-card:nth-child(3) .gas-unit {
+  color: rgb(235, 171, 163);
 }
 
 .gas-price-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .gas-value {
   font-size: 2.5rem;
   color: #fff;
@@ -107,7 +142,7 @@ body {
 
 .eth-price {
   font-size: 2rem;
-  color: #26d0ce;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -116,12 +151,13 @@ body {
   border-radius: 16px;
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 5rem;
 }
 
 .input-group input {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255, 255, 255);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 1rem;
   border-radius: 8px;
   width: 100%;
