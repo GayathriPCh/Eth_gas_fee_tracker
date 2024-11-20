@@ -61,7 +61,33 @@ const GasTracker = () => {
     <div className="modern-container">
       <div className="glass-card">
         <h1 className="main-title">Ethereum Gas Fee Tracker</h1>
-        
+<div className="education-section">
+  <div className="info-card">
+    <h2>What is Ethereum Gas?</h2>
+    <p>Gas is the unit that measures computational effort required to execute operations on the Ethereum network. Every transaction needs gas to be processed.</p>
+    
+    <h3>Understanding Gas Terms:</h3>
+    <div className="terms-grid">
+      <div className="term-card">
+        <h4>Gas Price (Gwei)</h4>
+        <p>The amount you're willing to pay per unit of gas. Measured in Gwei (1 Gwei = 0.000000001 ETH)</p>
+      </div>
+      <div className="term-card">
+        <h4>Gas Limit</h4>
+        <p>Maximum amount of gas you're willing to use for a transaction. Common limits:
+          • Simple transfer: 21,000
+          • Token transfer: ~65,000
+          • Smart contract: 100,000+</p>
+      </div>
+      <div className="term-card">
+        <h4>Transaction Priority</h4>
+        <p>• Low: Cheaper but slower
+           • Medium: Balanced cost/speed
+           • High: Faster but more expensive</p>
+      </div>
+    </div>
+  </div>
+</div>
         {loading ? (
           <div className="modern-spinner">
             <div className="spinner-ring"></div>
